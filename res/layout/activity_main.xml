@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppTheme"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppTheme"
+    android:id="@+id/actionbar"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="48dp"
+    android:layout_alignParentTop="true"
+    android:layout_gravity="center">
+    
+
+
+	<EditText
+	    style="@style/AppTheme"
+	    android:id="@+id/search"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:hint="@string/search_hint"
+	    android:layout_toLeftOf="@+id/eee"
+	    android:drawableLeft="@drawable/ic_btn_search"
+	    android:layout_marginTop="3dp"
+	    android:layout_marginLeft="3dp"
+	    android:layout_marginRight="3dp"
+	    android:drawablePadding="4dp"
+	    android:onClick="displaySearchDialog" />
+	
+	
+	<ImageButton
+		    style="@style/AppTheme"
+		    android:id="@+id/satellite"
+		    android:background="@drawable/button"
+		    android:layout_width="48dp"
+		    android:layout_height="fill_parent"
+		    android:src="@drawable/ic_menu_mapmode" 
+		    android:contentDescription="@string/satellite"
+		    android:layout_toLeftOf="@+id/compass"
+		    android:layout_gravity="center"
+		    android:onClick="satelliteMode" />
+	
+		<ImageButton
+		    style="@style/AppTheme"
+		    android:id="@+id/compass"
+		    android:background="@drawable/button"
+		    android:layout_width="48dp"
+		    android:layout_height="fill_parent"
+		    android:src="@drawable/ic_location" 
+		    android:layout_alignParentRight="true"
+		    android:contentDescription="@string/map_center"
+		    android:layout_gravity="center"
+		    android:onClick="zoomToMyLocation" />
+	
+</RelativeLayout>
+
+
+
+
+    <edu.uci.mvu1.uci.map.CustomMapView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mapview"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" 
+    android:clickable="true"
+    android:apiKey="0GVheveBLX6_RnqkYwuUY9aaNhrlf3PcAgRpKZg"
+    android:layout_below="@+id/actionbar"
+	/>
+
+</RelativeLayout>

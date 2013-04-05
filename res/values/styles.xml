@@ -1,0 +1,11 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <color name="default_color">#E3E3E3</color>
+    <style name="AppTheme" parent="android:Theme.Light" >
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/default_color</item>
+        <item name="android:colorBackground">@color/default_color</item>
+        
+        </style>
+
+</resources>
